@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name= "viewport" content="width=device -width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Order {
+            constructor(modifyOpt) {
+                let initVal = { price: 20, disCount: 0.95, invoice: false};
+                this.detail = Object.assign({},initVal,modifyOpt);
+                Object.assign(this.detai1, {disPrice:this.detail.price * this.detail.disCount});
+            }
+        }
+        let ord1 = new Order({price: 30, userName:' zhang', invoice: true });
+        let ord2 = new Order({price: 25, disCount: 0.8 });
+        console.log(ord1.detail);
+        console.log(ord2.detail);
+    </script>
+</body>
+</html>
